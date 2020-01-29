@@ -22,7 +22,7 @@ aws_access_key_id = [AWS ACCESS KEY ID]
 aws_secret_access_key = [AWS SECRET ACCESS KEY]
 ```
 
-- S3 Bucket の作成（最初にだれかが作ったら今後は不要）
+- S3 Bucket の作成（最初作ったら今後は不要）
 
 ```
 # 作成するバケットの確認
