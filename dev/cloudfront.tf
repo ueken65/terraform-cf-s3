@@ -53,6 +53,12 @@ resource "aws_cloudfront_distribution" "s3_cf_s3_page_distribution" {
     minimum_protocol_version = "TLSv1"
   }
 
+  logging_config {
+    include_cookies = false
+    bucket = aws_s3_bucket.cloudfront_access_log_bucket.bucket_domain_name
+    prefix = ""
+  }
+
   tags = {
     Name   = var.page_domain
     Domain = var.page_domain
