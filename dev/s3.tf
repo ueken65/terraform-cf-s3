@@ -35,3 +35,14 @@ resource "aws_s3_bucket" "public_bucket" {
 POLICY
 
 }
+
+resource "aws_s3_bucket" "cloudfront_access_log_bucket" {
+  bucket = "${var.project}-cloudfront-accesslog"
+  acl    = "private"
+
+  tags = {
+    Name = var.project
+    Env  = var.env
+    Role = "log"
+  }
+}
